@@ -6,14 +6,14 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int[] arr = new int[26];
+        int[] arr = new int[26];  // 알파벳을 담을 배열 생성하여 -1로 초기화
         for (int i = 0; i < arr.length; i++) {
             arr[i] = -1;
         }
 
-        String s = br.readLine();
+        String s = br.readLine();  // 문자열을 입력받고
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+            char ch = s.charAt(i);  // 문자열을 문자로 쪼갬
 
             if (arr[ch - 'a'] == -1) { // arr 원소 값이 -1 인 경우에만 초기화
                 arr[ch - 'a'] = i;
